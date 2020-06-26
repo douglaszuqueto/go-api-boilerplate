@@ -1,0 +1,6 @@
+bin/
+.env
+
+Dockerfile
+Makefile
+README.md

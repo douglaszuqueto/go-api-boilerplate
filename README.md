@@ -1,7 +1,6 @@
-# go-api-boilerplate
-Exemplo de API utilizando a linguagem Go
+# GO API boilerplate
 
-## Introdução
+Exemplo de arquitetura de API utilizando a linguagem Go
 
 ## Arquitetura
 
@@ -18,30 +17,84 @@ http
 ├── api
 │   ├── admin
 │   │   ├── api.go
-│   │   ├── client.go
-│   │   ├── device.go
-│   │   ├── farm.go											
-│   │   ├── farm_user.go
 │   │   └── user.go
 │   ├── auth
 │   │   ├── api.go
 │   │   └── login.go
 │   └── client
 │       ├── api.go
-│       ├── farm.go
 │       └── user.go
 ├── main.go
 ├── middleware
-│   ├── acl.go
 │   ├── cors.go
-│   ├── jwt.go
 │   ├── logger.go
-│   ├── maxClient.go
-│   ├── rateLimit.go
-│   └── validators.go
+│   ├── max_client.go
 └── utils
     └── handler.go
 
+```
+
+## Endpoints
+
+### Admin
+
+| Description | http | path |
+|:--:|:--:|:--|
+| list | GET | /api/admin/user |
+| get  | GET | /api/admin/user/:id |
+| store | POST | /api/admin/user  |
+| update | PUT | /api/admin/user/:id |
+| delete | DELETE | /api/admin/user/:id |
+
+### Public
+
+| Description | http | path |
+|:--:|:--:|:--|
+| list | GET | /api/admin/user |
+| get  | GET | /api/admin/user/:id |
+
+
+### Auth
+
+| Description | http | path |
+|:--:|:--:|:--|
+| admin | POST | /api/auth/admin/signin |
+| public  | POST | /api/auth/client/signin |
+
+## Insomnia
+
+Lista de todas requisições para usar com Insomnia, basta importar :) => [link](./github/Go-API-boilerplate_2020-06-26.json)
+
+## Build & Deploy
+
+### Standalone
+
+* Build
+
+```bash
+make prod
+```
+
+* Deploy
+
+```bash
+./bin/go-api-boilerplate
+```
+
+### Docker
+
+* Build
+
+```bash
+make docker
+```
+
+* Deploy
+
+```bash
+docker run -it --name go-api-boilerplate \
+    -p 3000:3000 \
+    douglaszuqueto/go-api-boilerplate:latest
 ```
 
 ## Referências
