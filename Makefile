@@ -16,4 +16,7 @@ docker:
 	docker build -t douglaszuqueto/go-api-boilerplate .
 	docker push douglaszuqueto/go-api-boilerplate
 
-.PHONY: dev prod upx docker
+docker-push: docker
+	docker push douglaszuqueto/go-api-boilerplate
+
+.PHONY: dev prod upx docker docker-push

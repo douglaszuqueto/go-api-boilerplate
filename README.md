@@ -63,7 +63,7 @@ http
 
 ## Insomnia
 
-Lista de todas requisições para usar com Insomnia, basta importar :) => [link](./github/Go-API-boilerplate_2020-06-26.json)
+Lista de todas requisições para usar com Insomnia, basta importar :) => [link](./.github/Go-API-boilerplate_2020-06-26.json)
 
 ## Build & Deploy
 
