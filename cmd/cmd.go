@@ -13,8 +13,6 @@ import (
 	"github.com/douglaszuqueto/go-api-boilerplate/pkg/util/graceful"
 )
 
-var db storage.UserStorage
-
 func main() {
 	fmt.Println("API boilerplate")
 
