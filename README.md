@@ -65,6 +65,11 @@ http
 
 Lista de todas requisições para usar com Insomnia, basta importar :) => [link](./.github/Go-API-boilerplate_2020-06-26.json)
 
+## Dependências
+
+* [Gorilla Mux](github.com/gorilla/mux)
+* [Gorilla Handlers](github.com/gorilla/handlers)
+
 ## Build & Deploy
 
 ### Standalone
@@ -87,6 +92,12 @@ make prod
 
 ```bash
 make docker
+```
+
+* Push
+
+```bash
+make docker-push
 ```
 
 * Deploy
