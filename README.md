@@ -50,8 +50,8 @@ http
 
 | Description | http | path |
 |:--:|:--:|:--|
-| list | GET | /api/admin/user |
-| get  | GET | /api/admin/user/:id |
+| list | GET | /api/user |
+| get  | GET | /api/user/:id |
 
 
 ### Auth
